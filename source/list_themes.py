@@ -1,8 +1,3 @@
-# https://github.com/UN-GCPDS/qt-material
-# from qt_material import list_themes
-# from pprint import pprint  # 导入pprint接口，可以打印出更加漂亮的list列表数据
-from qt_material import apply_stylesheet
-
 theme = ['dark_amber.xml',  # 琥珀0
          'dark_blue.xml',  # 蓝色1
          'dark_cyan.xml',
@@ -65,12 +60,4 @@ extra = {
 
 if __name__ == '__main__':
     x = 28  # 0-28
-    # app = QApplication([])
-    # apply_stylesheet(app, theme[x])
-    # stats = Stats()
-    # stats.ui.show()
-    # app.exec_()
-
     print(theme[x])
-    # pprint('总计主题样式：{} 种！'.format(len(list_themes())))
-    # pprint(list_themes())

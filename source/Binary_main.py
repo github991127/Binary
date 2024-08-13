@@ -1,6 +1,7 @@
 from PySide2.QtWidgets import QApplication, QWidget
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtGui import QIcon
+from qt_material import apply_stylesheet
 
 import Binary
 from list_themes import *
@@ -49,10 +50,10 @@ class Stats:
 
 if __name__ == '__main__':
     app = QApplication([])
-    app.setWindowIcon(QIcon('image.png'))
-    apply_stylesheet(app, theme[32], extra=extra, invert_secondary=False)  # 默认dark-False
+    app.setWindowIcon(QIcon('..//res//image.png'))
+    apply_stylesheet(app, theme[35], extra=extra, invert_secondary=False)  # 默认dark-False
     w = QWidget()
-    w.setWindowIcon(QIcon('image.png'))
+    w.setWindowIcon(QIcon('..//res//image.png'))
     stats = Stats()
     stats.ui.show()
     app.exec_()
