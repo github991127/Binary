@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link id="themeLink" rel="stylesheet" href="{{ url_for('static', filename='css/themes/' + theme_file) }}">
+    <style>
+        body { --font-family: {{ font_family }}; --font-size: {{ font_size }}; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>二进制 / 十进制 转换</h1>
+            <select id="themeSelect" class="theme-select"></select>
+        </header>
+
+        <textarea id="binaryInput" placeholder="在这里输入二进制数，多个数用 . 隔开，例如 11000000.10101000">{{ binary_default or '' }}</textarea>
+
+        <div class="input-row">
+            <input type="number" id="bit0Count" value="8" min="0" placeholder="位数">
+            <button id="btnBit0">位0输入</button>
+            <input type="number" id="bit1Count" value="8" min="0" placeholder="位数">
+            <button id="btnBit1">位1输入</button>
+        </div>
+
+        <div class="action-row">
+            <button id="btnDec2Bin" class="btn-arrow" title="十进制 → 二进制">↑</button>
+            <button id="btnClear" class="danger">清空</button>
+            <button id="btnBin2Dec" class="btn-arrow" title="二进制 → 十进制">↓</button>
+        </div>
+
+        <textarea id="decimalInput" placeholder="在这里输入十进制数，多个数用 . 隔开，例如 192.168">{{ decimal_default or '' }}</textarea>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+:root {
+  --bg: #e0f7fa;
+  --fg: #00232b;
+  --accent: #0097a7;
+  --accent-fg: #ffffff;
+  --surface: #b2ebf2;
+  --surface-hover: #80deea;
+  --border: rgba(0, 0, 0, 0.12);
+}

@@ -1,115 +1,61 @@
 # Binary
 
-二进制十进制快速转换！
+二进制 / 十进制快速转换小工具。
 
-<!-- PROJECT SHIELDS -->
+## 技术栈
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+- **Flask** — 本地后端服务与 REST API
+- **pywebview** — 将 Flask 页面封装为原生桌面窗口
+- **PyInstaller** — 打包为独立 Windows 桌面程序
 
-<!-- PROJECT LOGO -->
-<br />
+## 运行方式
 
-<p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
-    <img src="res/image.png" alt="Logo" width="80" height="80">
-  </a>
-</p>
+### 开发调试
 
-
-
- 
-## 目录
-
-- [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
-  - [安装步骤](#安装步骤)
-- [文件目录说明](#文件目录说明)
-- [开发的架构](#开发的架构)
-- [部署](#部署)
-- [使用到的框架](#使用到的框架)
-- [贡献者](#贡献者)
-  - [如何参与开源项目](#如何参与开源项目)
-- [版本控制](#版本控制)
-- [作者](#作者)
-- [鸣谢](#鸣谢)
-
-### 上手指南
-
-###### 开发前的配置要求
-
-    importlib-metadata==6.7.0
-    PySide2==5.15.6
-    qt-material==2.14
-
-
-###### **安装步骤**
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-
-```sh
-git clone git@github.com:github991127/Binary.git
+```bash
+cd source
+python main.py
 ```
 
-### 文件目录说明
+### 打包
 
+```bash
+python -m PyInstaller source/Binary_webview.spec
+```
 
+打包产物位于 `dist/Binary_webview/Binary_webview.exe`，双击即可运行，无需安装 Python 或浏览器。
 
+## 功能
 
+- 二进制数 ↔ 十进制数快速转换（支持 `.` 分隔多段，如 `192.168`）
+- 批量输入 0 / 1 位
+- 一键清空
+- 多主题切换（基于 CSS 变量）
 
+## 项目结构
 
-### 开发的架构 
+```text
+source/
+├── main.py              # pywebview 启动入口
+├── app.py               # Flask 后端
+├── Binary.py            # 转换核心逻辑
+├── list_themes.py       # 主题注册表
+├── templates/
+│   └── index.html       # 主界面
+└── static/
+    ├── css/
+    │   ├── base.css
+    │   └── themes/      # 全部主题 CSS
+    └── js/app.js
+```
 
+## 依赖
 
-### 部署
+```text
+Flask>=3.0
+Werkzeug>=3.0
+pywebview>=5.0
+pyinstaller>=6.0
+```
 
-
-### 使用到的框架
-
-### 贡献者
-
-
-#### 如何参与开源项目
-
-贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
-
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-### 版本控制
-
-该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
-
-### 作者
-`菖蒲`
-### 版权说明
-
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
-
-### 鸣谢
-
-<!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
-[contributors-url]: https://github.com/shaojintian/Best_README_template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
-[forks-url]: https://github.com/shaojintian/Best_README_template/network/members
-[stars-shield]: https://img.shields.io/github/stars/shaojintian/Best_README_template.svg?style=flat-square
-[stars-url]: https://github.com/shaojintian/Best_README_template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/shaojintian/Best_README_template.svg
-[license-shield]: https://img.shields.io/github/license/shaojintian/Best_README_template.svg?style=flat-square
-[license-url]: https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shaojintian
+运行 `pip install -r requirements.txt` 安装。
