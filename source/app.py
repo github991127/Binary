@@ -70,6 +70,8 @@ def create_app():
                 'key_count': deck.key_count,
                 'key_rate': str(deck.key_rate()),
                 'key_rate_pct': _pct(deck.key_rate()),
+                'available_tags': deck.available_tags,
+                'tag_display_names': deck.tag_display_names,
                 'rows': deck.rows,
                 'groups': [
                     {
@@ -95,9 +97,11 @@ def create_app():
         try:
             deck = load_deck()
             data = request.get_json(silent=True) or {}
-            a = _validate_draw(data.get('a'), deck)
+            tags = _validate_tags(data.get('tags'), deck)
+            view = deck.with_tags(tags)
+            a = _validate_draw(data.get('a'), view)
             b = _validate_b(data.get('b'), a)
-            result = problem1_score_distribution(deck.total, deck.key_count, a, b)
+            result = problem1_score_distribution(view['total'], view['key_count'], a, b)
             return jsonify({'ok': True, **result})
         except ValueError as e:
             return jsonify({'ok': False, 'error': str(e)}), 400
@@ -107,18 +111,23 @@ def create_app():
             logger.exception('Problem1 calculation failed')
             return jsonify({'ok': False, 'error': '计算失败'}), 500
 
-    @app.route('/api/problem2', methods=['GET'])
+    @app.route('/api/problem2', methods=['POST'])
     def api_problem2():
         """问题 2：返回 52 种花色点数组合下抽到关键牌的概率。"""
         try:
             deck = load_deck()
-            groups = problem2_group_probabilities(deck.groups)
+            data = request.get_json(silent=True) or {}
+            tags = _validate_tags(data.get('tags'), deck)
+            view = deck.with_tags(tags)
+            groups = problem2_group_probabilities(view['groups'])
             return jsonify({
                 'ok': True,
-                'N': deck.total,
-                'K': deck.key_count,
+                'N': view['total'],
+                'K': view['key_count'],
                 'groups': groups,
             })
+        except ValueError as e:
+            return jsonify({'ok': False, 'error': str(e)}), 400
         except DeckError as e:
             return jsonify({'ok': False, 'error': str(e)}), 400
         except Exception:
@@ -131,8 +140,10 @@ def create_app():
         try:
             deck = load_deck()
             data = request.get_json(silent=True) or {}
-            a = _validate_draw(data.get('a'), deck)
-            result = problem3_probabilities(deck.total, deck.key_count, deck.groups, a)
+            tags = _validate_tags(data.get('tags'), deck)
+            view = deck.with_tags(tags)
+            a = _validate_draw(data.get('a'), view)
+            result = problem3_probabilities(view['total'], view['key_count'], view['groups'], a)
             return jsonify({'ok': True, **result})
         except ValueError as e:
             return jsonify({'ok': False, 'error': str(e)}), 400
@@ -162,13 +173,13 @@ def _parse_int(value, label):
     return n
 
 
-def _validate_draw(a, deck):
+def _validate_draw(a, view):
     """校验抽牌数 a：非负整数且不超过总牌数。"""
     a = _parse_int(a, '抽牌数 a')
     if a < 0:
         raise ValueError('抽牌数 a 必须为非负整数')
-    if a > deck.total:
-        raise ValueError(f'抽牌数 a 不能大于总牌数 {deck.total}')
+    if a > view['total']:
+        raise ValueError(f'抽牌数 a 不能大于总牌数 {view["total"]}')
     return a
 
 
@@ -180,6 +191,19 @@ def _validate_b(b, a):
     if b > a:
         raise ValueError('最大得分 b 不能大于抽牌数 a')
     return b
+
+
+def _validate_tags(tags, deck):
+    """校验前端传回的 tag 列表：必须是 list/set，且每个 tag 必须存在。"""
+    if tags is None:
+        return []
+    if not isinstance(tags, (list, tuple, set)):
+        raise ValueError('tags 必须是列表')
+    available = set(deck.available_tags)
+    invalid = [t for t in tags if t not in available]
+    if invalid:
+        raise ValueError('未知的 tag：' + '、'.join(invalid))
+    return list(tags)
 
 
 if __name__ == '__main__':

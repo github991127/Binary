@@ -5,6 +5,7 @@
  * - 主题加载与切换（持久化到 localStorage）
  * - Tab 导航与 ARIA 状态同步
  * - 牌库表格初始化
+ * - 关键 tag 选择状态管理（默认选中第一个 tag）
  * - 问题 1/2/3 的请求、渲染与交互
  * - 问题 2 热力图多选状态管理，以及与牌库的筛选联动
  */
@@ -13,8 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeSelect = document.getElementById('themeSelect');
     const themeLink = document.getElementById('themeLink');
     const THEME_KEY = 'card-prob-theme';
+    const TAGS_KEY = 'card-prob-selected-tags';
 
     let deckData = null;           // /api/deck 返回的牌库原始数据
+    let selectedTags = [];         // 当前选中的关键 tag
     let charts = [];               // 当前 Tab 中活跃的 ECharts 实例，切页前销毁
     let p2Groups = [];             // 问题 2 当前返回的 52 个组合（用于无选择时回显全部）
     const p2Selections = new Map(); // 问题 2 已选组合：key = suit|rank，value = { suit, rank, group }
@@ -130,12 +133,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeSelect.addEventListener('change', () => applyTheme(themeSelect.value));
 
+    // tag 选择器
+    const tagSelectorEl = document.getElementById('tagSelector');
+
+    /**
+     * 根据 /api/deck 返回的 available_tags 渲染勾选区。
+     * 默认选中第一个 tag；若本地有保存则恢复。
+     * @param {string[]} availableTags
+     * @param {Object<string,string>} tagDisplayNames
+     */
+    function renderTagSelector(availableTags, tagDisplayNames) {
+        const optionsEl = tagSelectorEl.querySelector('.tag-options');
+        optionsEl.innerHTML = '';
+        if (!availableTags || availableTags.length === 0) {
+            optionsEl.textContent = '无 tag 列';
+            selectedTags = [];
+            return;
+        }
+
+        // 初始化选中：本地有合法保存则恢复，否则默认第一个
+        const saved = localStorage.getItem(TAGS_KEY);
+        let initial = [];
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                initial = parsed.filter(t => availableTags.includes(t));
+            } catch { /* ignore */ }
+        }
+        if (initial.length === 0) {
+            initial = [availableTags[0]];
+        }
+        selectedTags = initial;
+
+        availableTags.forEach(tag => {
+            const label = document.createElement('label');
+            label.className = 'tag-option';
+            const cb = document.createElement('input');
+            cb.type = 'checkbox';
+            cb.value = tag;
+            cb.checked = selectedTags.includes(tag);
+            cb.addEventListener('change', () => {
+                if (cb.checked) {
+                    selectedTags = [...selectedTags, tag];
+                } else {
+                    selectedTags = selectedTags.filter(t => t !== tag);
+                }
+                localStorage.setItem(TAGS_KEY, JSON.stringify(selectedTags));
+                if (deckData) {
+                    Cards.refreshTagColumn(selectedTags);
+                    Cards.applyFilter();
+                }
+            });
+            label.appendChild(cb);
+            label.appendChild(document.createTextNode(tagDisplayNames?.[tag] || tag));
+            optionsEl.appendChild(label);
+        });
+    }
+
     // 牌库：绑定清除筛选按钮，初始化表格并加载数据
     document.getElementById('deckClearFilter').addEventListener('click', () => {
         Cards.clearFilter();
     });
     Cards.init();
-    Cards.load().then(data => { deckData = data; }).catch(() => {});
+    Cards.load().then(data => {
+        deckData = data;
+        renderTagSelector(data.available_tags, data.tag_display_names);
+        Cards.setAvailableTags(data.available_tags, data.tag_display_names);
+        Cards.refreshTagColumn(selectedTags);
+        Cards.applyFilter();
+    }).catch(() => {});
 
     // 问题 1：绑定输入框回车与计算按钮
     const p1InputA = document.getElementById('p1InputA');
@@ -154,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await apiFetch('/api/problem1', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ a, b }),
+                body: JSON.stringify({ a, b, tags: selectedTags }),
             });
             renderProblem1(data);
         } catch (err) { /* apiFetch 已显示 Toast */ }
@@ -219,7 +285,11 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     async function loadProblem2() {
         try {
-            const data = await apiFetch('/api/problem2');
+            const data = await apiFetch('/api/problem2', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ tags: selectedTags }),
+            });
             p2Groups = data.groups || [];
             renderProblem2(data);
         } catch (err) { /* apiFetch 已显示 Toast */ }
@@ -303,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await apiFetch('/api/problem3', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ a }),
+                body: JSON.stringify({ a, tags: selectedTags }),
             });
             renderProblem3(data);
         } catch (err) { /* apiFetch 已显示 Toast */ }

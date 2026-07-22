@@ -3,9 +3,10 @@
  *
  * 负责：
  * - 从 /api/deck 加载牌库数据
- * - 关键字筛选（名称 / 花色 / 点数 / 关键牌）
+ * - 关键字筛选（名称 / 花色 / 点数 / tag 内容）
  * - 列排序（点击表头）
  * - 分页
+ * - 动态 tag 列渲染与勾选联动
  * - 外部组合筛选：setFilter({ suit, rank }) 可与问题 2 热力图联动
  */
 const Cards = (() => {
@@ -16,9 +17,13 @@ const Cards = (() => {
     let sortKey = 'id';        // 当前排序列
     let sortAsc = true;        // 升序/降序
     let externalFilter = null; // { suit?, rank? } 或 { combos: [{suit, rank}, ...] }，由问题 2 热力图传入
+    let availableTags = [];    // 当前牌库拥有的 tag 列名
+    let selectedTags = [];     // 当前被选中的 tag 列名
+    let tagDisplayNames = {};  // tag 列名 -> 显示名称
 
     // DOM 引用
     const table = document.getElementById('deckTable');
+    const theadRow = table ? table.querySelector('thead tr') : null;
     const tbody = table ? table.querySelector('tbody') : null;
     const summaryEl = document.getElementById('deckSummary');
     const filterInput = document.getElementById('deckFilter');
@@ -30,18 +35,18 @@ const Cards = (() => {
         if (!table || !tbody) return;
 
         // 表头排序
-        table.querySelectorAll('th[data-sort]').forEach(th => {
-            th.addEventListener('click', () => {
-                const key = th.dataset.sort;
-                if (sortKey === key) {
-                    sortAsc = !sortAsc;
-                } else {
-                    sortKey = key;
-                    sortAsc = true;
-                }
-                currentPage = 1;
-                applyFilter();
-            });
+        theadRow.addEventListener('click', e => {
+            const th = e.target.closest('th[data-sort]');
+            if (!th) return;
+            const key = th.dataset.sort;
+            if (sortKey === key) {
+                sortAsc = !sortAsc;
+            } else {
+                sortKey = key;
+                sortAsc = true;
+            }
+            currentPage = 1;
+            applyFilter();
         });
 
         // 关键字筛选：实时过滤
@@ -58,6 +63,30 @@ const Cards = (() => {
         });
     }
 
+    /** 设置当前牌库拥有的 tag 列名与显示名称映射。 */
+    function setAvailableTags(tags, displayNames) {
+        availableTags = tags || [];
+        tagDisplayNames = displayNames || {};
+    }
+
+    /** 根据选中的 tag 列重建表头（ID / 名称 / 花色 / 点数 + tag 列）。 */
+    function refreshTagColumn(tags) {
+        selectedTags = tags || [];
+        if (!theadRow) return;
+
+        // 保留前 4 个固定列，移除旧的 tag 列
+        const fixed = Array.from(theadRow.children).slice(0, 4);
+        theadRow.innerHTML = '';
+        fixed.forEach(th => theadRow.appendChild(th));
+
+        selectedTags.forEach(tag => {
+            const th = document.createElement('th');
+            th.dataset.sort = `tag:${tag}`;
+            th.textContent = tagDisplayNames[tag] || tag;
+            theadRow.appendChild(th);
+        });
+    }
+
     /** 从后端加载牌库数据并渲染概览表格。 */
     function load() {
         return fetch('/api/deck')
@@ -65,10 +94,11 @@ const Cards = (() => {
             .then(data => {
                 if (!data.ok) throw new Error(data.error || '加载牌库失败');
                 allRows = data.rows || [];
+                const displayNames = data.tag_display_names || {};
+                const displayList = data.available_tags.map(t => displayNames[t] || t);
                 summaryEl.innerHTML = `
                     <span>总牌数：<strong>${data.total}</strong></span>
-                    <span>关键牌：<strong>${data.key_count}</strong></span>
-                    <span>关键牌占比：<strong>${data.key_rate_pct.toFixed(2)}%</strong></span>
+                    <span>可选关键 tag：<strong>${displayList.join('、') || '无'}</strong></span>
                 `;
                 applyFilter();
                 return data;
@@ -105,12 +135,13 @@ const Cards = (() => {
     function applyFilter() {
         const kw = (filterInput.value || '').trim().toLowerCase();
         filteredRows = allRows.filter(r => {
-            // 关键字匹配：名称、花色符号、点数、关键牌字段
+            // 关键字匹配：名称、花色符号、点数、tag 字段
+            const tagTexts = selectedTags.map(t => String(r.tags?.[t] || '')).filter(Boolean);
             const matchKw = !kw
                 || String(r.name || '').toLowerCase().includes(kw)
                 || String(r.color2 || '').includes(kw)
                 || String(r.number || '').includes(kw)
-                || (r.isTrue === 1 ? '关键牌' : '').includes(kw);
+                || tagTexts.some(text => text.toLowerCase().includes(kw));
 
             // 外部组合筛选（来自问题 2 热力图）：支持多个组合或单 suit/rank
             let matchCombo = true;
@@ -134,8 +165,15 @@ const Cards = (() => {
     /** 根据当前 sortKey / sortAsc 对筛选结果排序。 */
     function sortRows() {
         filteredRows.sort((a, b) => {
-            let va = a[sortKey];
-            let vb = b[sortKey];
+            let va, vb;
+            if (sortKey.startsWith('tag:')) {
+                const tag = sortKey.slice(4);
+                va = a.tags?.[tag] || '';
+                vb = b.tags?.[tag] || '';
+            } else {
+                va = a[sortKey];
+                vb = b[sortKey];
+            }
             if (typeof va === 'string') va = va.toLowerCase();
             if (typeof vb === 'string') vb = vb.toLowerCase();
             if (va < vb) return sortAsc ? -1 : 1;
@@ -157,7 +195,7 @@ const Cards = (() => {
                 <td>${esc(r.name)}</td>
                 <td>${esc(r.color2)}</td>
                 <td>${r.number}</td>
-                <td>${r.isTrue === 1 ? '<span style="color:var(--accent); font-weight:600">是</span>' : '否'}</td>
+                ${selectedTags.map(t => `<td>${esc(r.tags?.[t] || '')}</td>`).join('')}
             </tr>
         `).join('');
 
@@ -195,5 +233,5 @@ const Cards = (() => {
         return div.innerHTML;
     }
 
-    return { init, load, setFilter, clearFilter };
+    return { init, load, setFilter, clearFilter, setAvailableTags, refreshTagColumn, applyFilter };
 })();

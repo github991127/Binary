@@ -5,59 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe76abf4-a4bb-4570-bac3-bde79e650c98" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Binary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Probability.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cal.md" beforeDir="false" afterPath="$PROJECT_DIR$/Cal.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/Probability.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Binary_webview.spec" beforeDir="false" afterPath="$PROJECT_DIR$/source/Probability_webview.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Card.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/Card.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/list_themes.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/list_themes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/cards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_amber.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_amber.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_cyan.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_cyan.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_lightgreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_lightgreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_medical.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_medical.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_pink.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_purple.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_red.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_red.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_teal.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_teal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_yellow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_amber.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_amber.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_blue_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_blue_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_cyan.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_cyan.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_cyan_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_cyan_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_orange.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_pink.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_pink_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_pink_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_purple.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_purple_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_purple_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_red.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_red.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_red_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_red_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_teal.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_teal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_teal_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_teal_500.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_yellow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_B.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_B.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_G.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_G.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_R.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_R.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_Y.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_Y.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_white.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_white.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_B.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_B.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_G.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_G.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_P.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_P.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_R.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_R.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_black.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_black.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/js/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/js/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

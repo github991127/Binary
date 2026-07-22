@@ -33,7 +33,13 @@
                 </div>
                 <div class="panel-card">
                     <div class="toolbar">
-                        <input type="text" id="deckFilter" placeholder="🔍 筛选：花色 / 点数 / 名称" class="filter-input" aria-label="筛选牌库">
+                        <div id="tagSelector" class="tag-selector" aria-label="选择关键 tag">
+                            <span class="tag-selector-label">关键 tag：</span>
+                            <span class="tag-options">加载中...</span>
+                        </div>
+                    </div>
+                    <div class="toolbar">
+                        <input type="text" id="deckFilter" placeholder="🔍 筛选：花色 / 点数 / 名称 / tag" class="filter-input" aria-label="筛选牌库">
                         <select id="deckPageSize" aria-label="每页条数">
                             <option value="20">每页 20</option>
                             <option value="50">每页 50</option>
@@ -51,7 +57,7 @@
                                     <th data-sort="name">名称</th>
                                     <th data-sort="color2">花色</th>
                                     <th data-sort="number">点数</th>
-                                    <th data-sort="isTrue">关键牌</th>
+                                    <!-- tag 列由 JS 动态追加 -->
                                 </tr>
                             </thead>
                             <tbody></tbody>

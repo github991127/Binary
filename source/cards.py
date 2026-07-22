@@ -1,6 +1,7 @@
 import logging
+import re
 from pathlib import Path
-from typing import Optional, Union
+from typing import Dict, List, Optional, Set, Union
 
 import openpyxl
 
@@ -14,7 +15,10 @@ class DeckError(ValueError):
 
 
 # Excel 中必须包含的列
-REQUIRED_COLUMNS = {'id', 'name', 'color', 'color2', 'number', 'isTrue'}
+REQUIRED_COLUMNS = {'id', 'name', 'color', 'color2', 'number'}
+
+# 匹配 tag 列名：tag1, tag2, ... 不区分大小写
+TAG_COLUMN_RE = re.compile(r'^tag\d+$', re.IGNORECASE)
 
 # 默认读取的工作表名
 DEFAULT_SHEET_NAME = '160'
@@ -23,17 +27,49 @@ DEFAULT_SHEET_NAME = '160'
 class Deck:
     """牌库数据容器。原数据加载后不可变，仅通过只读属性访问。"""
 
-    def __init__(self, rows):
+    def __init__(self, rows, available_tags, tag_display_names=None):
         # rows 为字典列表，每个字典代表一张牌
         self.rows = rows
+        self.available_tags = available_tags
+        self.tag_display_names = tag_display_names or {t: t for t in available_tags}
         self.total = len(rows)
-        # 统计关键牌数量（isTrue == 1）
-        self.key_count = sum(1 for r in rows if r['isTrue'] == 1)
+        # 统计关键牌数量（默认空选：没有任何 tag 被选中，关键牌数为 0）
+        self.key_count = 0
+        self.selected_tags = set()
         # 按花色符号与点数进行分组，用于问题 2 / 问题 3
         self.groups = self._build_groups(rows)
 
+    def display_name(self, tag):
+        """返回 tag 列的显示名称。"""
+        return self.tag_display_names.get(tag, tag)
+
+    def with_tags(self, tags):
+        """按选中的 tag 列生成派生统计，返回包含新 key_count / groups 的视图字典。
+
+        保持当前 Deck 实例不变。
+        """
+        selected = set(tags) & set(self.available_tags)
+        key_count = 0
+        for r in self.rows:
+            if any(_nonempty(r['tags'].get(t)) for t in selected):
+                key_count += 1
+        groups = self._build_groups_for_tags(self.rows, selected)
+        return {
+            'total': self.total,
+            'key_count': key_count,
+            'groups': groups,
+            'rows': self.rows,
+            'available_tags': self.available_tags,
+            'tag_display_names': self.tag_display_names,
+            'selected_tags': selected,
+        }
+
+    def _build_groups(self, rows):
+        """按 (color2, number) 分组，汇总每组张数与关键牌数（.selected_tags）。"""
+        return self._build_groups_for_tags(rows, self.selected_tags)
+
     @staticmethod
-    def _build_groups(rows):
+    def _build_groups_for_tags(rows, selected_tags):
         """按 (color2, number) 分组，汇总每组张数与关键牌数。"""
         groups = {}
         for r in rows:
@@ -47,7 +83,7 @@ class Deck:
                     'keys': 0,             # 该组合关键牌张数
                 }
             groups[key]['size'] += 1
-            if r['isTrue'] == 1:
+            if any(_nonempty(r['tags'].get(t)) for t in selected_tags):
                 groups[key]['keys'] += 1
         # 按花色、点数排序，保证顺序稳定
         return [groups[k] for k in sorted(groups, key=lambda x: (x[0], x[1]))]
@@ -113,6 +149,10 @@ def _load_from_excel(excel_path: Optional[Union[str, Path]] = None) -> Deck:
         missing_cols = ', '.join(sorted(missing))
         raise DeckError(f"Card.xlsx 缺少必要列：{missing_cols}")
 
+    # 发现并排序 tag 列：按末尾数字升序，保留原列名大小写
+    tag_cols = [h for h in headers if TAG_COLUMN_RE.match(h)]
+    tag_cols.sort(key=lambda h: int(h[3:]))
+
     indices = {h: i for i, h in enumerate(headers)}
     rows = []
     for idx, raw in enumerate(raw_rows[1:], start=2):
@@ -120,13 +160,14 @@ def _load_from_excel(excel_path: Optional[Union[str, Path]] = None) -> Deck:
         if all(v is None or str(v).strip() == '' for v in raw):
             continue
         try:
+            tags = {t: _str(raw[indices[t]]) for t in tag_cols}
             rows.append({
                 'id': _int(raw[indices['id']], 'id', idx),
                 'name': _str(raw[indices['name']]),
                 'color': _int(raw[indices['color']], 'color', idx),
                 'color2': _str(raw[indices['color2']]),
                 'number': _int(raw[indices['number']], 'number', idx),
-                'isTrue': _int(raw[indices['isTrue']], 'isTrue', idx),
+                'tags': tags,
             })
         except DeckError:
             raise
@@ -136,11 +177,27 @@ def _load_from_excel(excel_path: Optional[Union[str, Path]] = None) -> Deck:
     if not rows:
         raise DeckError('Card.xlsx 中没有有效的牌数据')
 
-    key_count = sum(1 for r in rows if r['isTrue'] == 1)
-    logger.info('Loaded deck: %s cards, %s key cards', len(rows), key_count)
-    return Deck(rows)
+    # 为每个 tag 列推导显示名称：若该列非空值唯一，则用该值；否则回退原列名
+    tag_display_names = _build_tag_display_names(tag_cols, rows)
+
+    logger.info('Loaded deck: %s cards, tags: %s', len(rows), tag_display_names)
+    return Deck(rows, tag_cols, tag_display_names)
 
 
+def _build_tag_display_names(tag_cols, rows):
+    """为每个 tag 列推导显示名称。
+
+    - 若某 tag 列在所有行中非空且值完全相同，则使用该值作为显示名（如"杀"）。
+    - 若该列没有非空值，或存在多种不同值，则回退到原列名（如"tag1"）。
+    """
+    display_names = {}
+    for col in tag_cols:
+        values = {r['tags'][col] for r in rows if _nonempty(r['tags'][col])}
+        if len(values) == 1:
+            display_names[col] = values.pop()
+        else:
+            display_names[col] = col
+    return display_names
 def _int(value, label, row):
     """将单元格值解析为整数，失败时抛出带行号/列名的 DeckError。"""
     if value is None:
@@ -156,3 +213,8 @@ def _str(value):
     if value is None:
         return ''
     return str(value).strip()
+
+
+def _nonempty(value):
+    """判断字符串是否非空（trim 后）。"""
+    return isinstance(value, str) and value != ''
