@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary</title>
+    <title>抽牌概率计算器</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link id="themeLink" rel="stylesheet" href="{{ url_for('static', filename='css/themes/' + theme_file) }}">
     <style>
@@ -11,32 +11,125 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="layout">
         <header>
-            <h1>二进制 / 十进制 转换</h1>
-            <select id="themeSelect" class="theme-select"></select>
+            <h1>抽牌概率计算器</h1>
+            <select id="themeSelect" class="theme-select" aria-label="选择主题"></select>
         </header>
 
-        <textarea id="binaryInput" placeholder="在这里输入二进制数，多个数用 . 隔开，例如 11000000.10101000">{{ binary_default or '' }}</textarea>
+        <main class="tabs">
+            <nav class="tab-nav" role="tablist" aria-label="功能标签">
+                <button class="tab-btn active" data-tab="deck" role="tab" aria-selected="true">📚 牌库</button>
+                <button class="tab-btn" data-tab="p1" role="tab" aria-selected="false">🎲 问题 1</button>
+                <button class="tab-btn" data-tab="p2" role="tab" aria-selected="false">🃏 问题 2</button>
+                <button class="tab-btn" data-tab="p3" role="tab" aria-selected="false">🧠 问题 3</button>
+            </nav>
 
-        <div class="input-row">
-            <input type="number" id="bit0Count" value="8" min="0" placeholder="位数">
-            <button id="btnBit0">位0输入</button>
-            <input type="number" id="bit1Count" value="8" min="0" placeholder="位数">
-            <button id="btnBit1">位1输入</button>
-        </div>
+            <!-- 牌库 Tab -->
+            <section id="tab-deck" class="tab-panel active" role="tabpanel">
+                <div class="panel-card">
+                    <h2>牌库概览</h2>
+                    <div class="deck-summary" id="deckSummary">加载中...</div>
+                </div>
+                <div class="panel-card">
+                    <div class="toolbar">
+                        <input type="text" id="deckFilter" placeholder="🔍 筛选：花色 / 点数 / 名称" class="filter-input" aria-label="筛选牌库">
+                        <select id="deckPageSize" aria-label="每页条数">
+                            <option value="20">每页 20</option>
+                            <option value="50">每页 50</option>
+                            <option value="100">每页 100</option>
+                            <option value="160">全部 160</option>
+                        </select>
+                        <button id="deckClearFilter" type="button">清除筛选</button>
+                        <span id="deckPager" class="pager"></span>
+                    </div>
+                    <div class="table-wrap">
+                        <table id="deckTable" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th data-sort="id">ID</th>
+                                    <th data-sort="name">名称</th>
+                                    <th data-sort="color2">花色</th>
+                                    <th data-sort="number">点数</th>
+                                    <th data-sort="isTrue">关键牌</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
 
-        <div class="action-row">
-            <button id="btnDec2Bin" class="btn-arrow" title="十进制 → 二进制">↑</button>
-            <button id="btnClear" class="danger">清空</button>
-            <button id="btnBin2Dec" class="btn-arrow" title="二进制 → 十进制">↓</button>
-        </div>
+            <!-- 问题 1 Tab -->
+            <section id="tab-p1" class="tab-panel" role="tabpanel">
+                <div class="panel-card">
+                    <h2>超几何分布：一次性抽 a 张牌，展示 P(X = k) 与 P(X ≥ k)（k = 0 到 b）</h2>
+                    <div class="form-row">
+                        <label>抽牌数 a：<input type="number" id="p1InputA" value="3" min="0" max="160" aria-label="抽牌数 a"></label>
+                        <label>最大得分 b：<input type="number" id="p1InputB" value="3" min="0" aria-label="最大得分 b"></label>
+                        <button id="p1Calc" class="primary" type="button">计算概率</button>
+                    </div>
+                </div>
+                <div id="p1Result" class="result-area">
+                    <div class="stats" id="p1Stats"></div>
+                    <div class="chart" id="p1Chart" aria-label="问题 1 概率分布图"></div>
+                    <div class="table-wrap">
+                        <table id="p1Table" class="data-table"></table>
+                    </div>
+                </div>
+            </section>
 
-        <textarea id="decimalInput" placeholder="在这里输入十进制数，多个数用 . 隔开，例如 192.168">{{ decimal_default or '' }}</textarea>
+            <!-- 问题 2 Tab -->
+            <section id="tab-p2" class="tab-panel" role="tabpanel">
+                <div class="panel-card">
+                    <h2>花色点数组合：每种组合下抽到关键牌的条件概率</h2>
+                    <p class="hint">点击热力图单元格可多选或取消选择，下方将显示已选组合的详情。</p>
+                </div>
+                <div class="result-area">
+                    <div class="stats" id="p2Stats"></div>
+                    <div class="chart" id="p2Chart" aria-label="问题 2 概率热力图"></div>
+                    <div class="panel-card">
+                        <div class="toolbar">
+                            <h3 id="p2SelectionTitle">已选组合：未选择</h3>
+                            <button id="p2ClearSelection" type="button">清空选择</button>
+                            <button id="p2GotoDeck" type="button" class="primary">在牌库中查看</button>
+                        </div>
+                        <div class="table-wrap">
+                            <table id="p2Table" class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>花色</th><th>点数</th><th>张数</th><th>关键牌</th><th>概率</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div id="status" class="status"></div>
+            <!-- 问题 3 Tab -->
+            <section id="tab-p3" class="tab-panel" role="tabpanel">
+                <div class="panel-card">
+                    <h2>策略对比：新手随机选牌 vs 高手选关键概率最高的牌</h2>
+                    <div class="form-row">
+                        <label>抽牌数 a：<input type="number" id="p3InputA" value="3" min="0" max="160" aria-label="抽牌数 a"></label>
+                        <button id="p3Calc" class="primary" type="button">计算策略</button>
+                    </div>
+                </div>
+                <div id="p3Result" class="result-area">
+                    <div class="stats" id="p3Stats"></div>
+                    <div class="chart" id="p3Chart" aria-label="问题 3 策略对比图"></div>
+                </div>
+            </section>
+        </main>
+
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
     </div>
 
+    <script src="{{ url_for('static', filename='vendor/echarts.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cards.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>

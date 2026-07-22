@@ -1,3 +1,9 @@
+"""主题列表与默认配置。
+
+theme 维护 static/css/themes/ 下的 CSS 文件名及顺序；
+extra 提供部分 UI 基础配置（字体、色值、密度）。
+"""
+
 from pathlib import Path
 
 # 主题列表对应 static/css/themes/ 下的 CSS 文件
@@ -45,24 +51,25 @@ theme = [
 # 默认主题索引，与原始 Qt 版本一致（my_dark_Y）
 default_theme_index = 35
 
+# 额外 UI 配置，供模板和前端使用
 extra = {
-    # Button colors
+    # 按钮色值（部分主题可能覆盖）
     'danger': '#dc3545',
     'warning': '#ffc107',
     'success': '#17a2b8',
 
-    # Font
+    # 字体与排版
     'font_family': '"Microsoft YaHei", "微软雅黑", "Heiti SC", sans-serif',
     'font_size': '16px',
     'line_height': '1.4',
 
-    # Density Scale
+    # 密度缩放因子
     'density_scale': '3',
 }
 
 
 def theme_css_name(index=None):
-    """返回用于 <link> 的主题 CSS 文件名。"""
+    """根据索引返回主题 CSS 文件名；超出范围时循环取模。"""
     if index is None:
         index = default_theme_index
     return theme[int(index) % len(theme)]

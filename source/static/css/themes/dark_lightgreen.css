@@ -6,4 +6,8 @@
   --surface: #133413;
   --surface-hover: #1d4a1d;
   --border: rgba(139, 195, 74, 0.25);
+  --danger: #dc3545;
+  --success: #17a2b8;
+  --warning: #ffc107;
+  --accent-rgb: 139, 195, 74;
 }

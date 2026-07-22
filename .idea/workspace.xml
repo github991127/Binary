@@ -5,322 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe76abf4-a4bb-4570-bac3-bde79e650c98" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Binary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Probability.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Binary_main.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/MSVCP140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/MSVCP140_1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/QtCore.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/QtGui.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/QtNetwork.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/QtUiTools.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/QtWidgets.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/QtXml.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/bearer/qgenericbearer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/generic/qtuiotouchplugin.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/iconengines/qsvgicon.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qgif.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qicns.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qico.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qjpeg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qpdf.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qsvg.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qtga.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qtiff.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qwbmp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/imageformats/qwebp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platforminputcontexts/qtvirtualkeyboardplugin.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platforms/qdirect2d.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platforms/qminimal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platforms/qoffscreen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platforms/qwebgl.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platforms/qwindows.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/platformthemes/qxdgdesktopportal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/plugins/styles/qwindowsvistastyle.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_ar.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_bg.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_ca.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_cs.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_da.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_de.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_en.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_es.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_fa.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_fi.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_fr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_gd.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_gl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_he.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_ar.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_bg.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_ca.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_cs.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_da.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_de.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_en.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_es.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_fr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_gl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_hr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_hu.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_it.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_ja.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_ko.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_nl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_nn.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_pl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_pt_BR.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_ru.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_sk.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_sl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_tr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_uk.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_zh_CN.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_help_zh_TW.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_hr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_hu.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_it.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_ja.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_ko.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_lt.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_lv.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_nl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_nn.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_pl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_pt_BR.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_pt_PT.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_ru.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_sk.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_sl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_sv.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_tr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_uk.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_zh_CN.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qt_zh_TW.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_ar.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_bg.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_ca.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_cs.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_da.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_de.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_en.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_es.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_fa.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_fi.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_fr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_gd.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_he.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_hr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_hu.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_it.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_ja.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_ko.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_lv.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_nl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_nn.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_pl.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_pt_BR.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_ru.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_sk.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_tr.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_uk.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_zh_CN.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/PySide2/translations/qtbase_zh_TW.qm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Core_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5DBus_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Gui_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Network_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Pdf_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5QmlModels_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Qml_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Quick_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Svg_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5VirtualKeyboard_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5WebSockets_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Widgets_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/Qt5Xml_conda.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/VCRUNTIME140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/VCRUNTIME140_1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_asyncio.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_bz2.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_ctypes.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_decimal.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_hashlib.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_lzma.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_multiprocessing.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_overlapped.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_queue.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_socket.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/_ssl.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-fibers-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/base_library.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/binary.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/icudt73.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/icuin73.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/icuuc73.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/image.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/jpeg8.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/libcrypto-3-x64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/libpng16.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/libssl-3-x64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/markupsafe/_speedups.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/pcre2-16.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/pyexpat.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/pyside2.cp37-win_amd64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/python37.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/dock_theme.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/Roboto-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/RobotoCondensed-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/RobotoCondensed-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/RobotoCondensed-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/RobotoCondensed-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/RobotoCondensed-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/fonts/roboto/RobotoCondensed-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/material.css.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/generate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/logo/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/logo/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/logo/logo_frame.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/base.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/branch-closed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/branch-end.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/branch-more.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/branch-open.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checkbox_checked.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checkbox_checked_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checkbox_indeterminate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checkbox_indeterminate_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checkbox_unchecked.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checkbox_unchecked_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checklist.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checklist_indeterminate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checklist_indeterminate_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/checklist_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/downarrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/downarrow2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/float.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/leftarrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/leftarrow2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/radiobutton_checked.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/radiobutton_checked_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/radiobutton_unchecked.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/radiobutton_unchecked_invert.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/rightarrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/rightarrow2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/sizegrip.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/slider.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/splitter-horizontal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/splitter-vertical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/tab_close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/toolbar-handle-horizontal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/toolbar-handle-vertical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/uparrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/uparrow2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/resources/source/vline.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_amber.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_blue.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_cyan.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_lightgreen.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_medical.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_pink.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_purple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_red.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_teal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/dark_yellow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_amber.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_blue.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_blue_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_cyan.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_cyan_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_lightgreen.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_lightgreen_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_orange.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_pink.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_pink_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_purple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_purple_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_red.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_red_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_teal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_teal_500.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/light_yellow.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_dark_B.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_dark_G.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_dark_R.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_dark_Y.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_dark_white.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_light_B.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_light_G.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_light_P.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_light_R.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/qt_material/themes/my_light_black.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/select.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/shiboken2.cp37-win_amd64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/shiboken2/shiboken2.cp37-win_amd64.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/ucrtbase.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/unicodedata.pyd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/zlib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Binary_main/zstd.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/Binary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Binary_main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Binary_main.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/binary.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/Probability.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Binary_webview.spec" beforeDir="false" afterPath="$PROJECT_DIR$/source/Probability_webview.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/list_themes.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/list_themes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_amber.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_amber.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_cyan.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_cyan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_lightgreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_lightgreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_medical.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_medical.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_red.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_teal.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_teal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/dark_yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/dark_yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_amber.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_amber.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_blue_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_blue_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_cyan.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_cyan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_cyan_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_cyan_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_lightgreen_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_pink_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_pink_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_purple_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_purple_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_red.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_red_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_red_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_teal.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_teal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_teal_500.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_teal_500.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/light_yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/light_yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_B.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_B.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_G.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_G.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_R.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_R.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_Y.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_Y.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_dark_white.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_dark_white.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_B.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_B.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_G.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_G.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_P.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_P.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_R.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_R.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/css/themes/my_light_black.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/themes/my_light_black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/web.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,6 +66,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -340,11 +80,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Python.Binary.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Binary_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Probability.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Probability_main.executor&quot;: &quot;Run&quot;,
     &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cards.executor&quot;: &quot;Run&quot;,
+    &quot;Python.desktop.executor&quot;: &quot;Run&quot;,
     &quot;Python.list_themes.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.web.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;

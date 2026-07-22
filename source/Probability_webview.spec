@@ -42,7 +42,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='Binary_webview',
+    name='Probability_webview',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -64,5 +64,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='Binary_webview',
+    name='Probability_webview',
 )

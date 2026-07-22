@@ -1,3 +1,8 @@
+"""网页端启动入口。
+
+将 source/ 加入模块搜索路径后，启动 Flask 开发服务器并自动打开浏览器。
+"""
+
 import sys
 import threading
 import webbrowser
@@ -9,16 +14,11 @@ if str(SOURCE) not in sys.path:
     sys.path.insert(0, str(SOURCE))
 
 from app import create_app
-
-
-def get_free_port():
-    import socket
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(('127.0.0.1', 0))
-        return s.getsockname()[1]
+from main import get_free_port
 
 
 def main():
+    """分配空闲端口、启动 Flask，并打开默认浏览器。"""
     port = get_free_port()
     app = create_app()
     url = f'http://127.0.0.1:{port}/'

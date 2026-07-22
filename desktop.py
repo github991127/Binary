@@ -1,3 +1,8 @@
+"""桌面端启动入口。
+
+仅做路径设置，然后委托 source/main.py 中的 main() 函数运行。
+"""
+
 import sys
 from pathlib import Path
 
