@@ -26,7 +26,7 @@ a = Analysis(
         'PySide2', 'PySide6', 'PyQt5', 'PyQt6',
         'qt_material', 'shiboken2', 'shiboken6',
         'matplotlib', 'numpy', 'pandas', 'scipy', 'tkinter',
-        'unittest', 'pydoc', 'pydoc_data', 'email', 'html5lib',
+        'unittest', 'pydoc', 'pydoc_data', 'html5lib',
         'xmlrpc', 'multiprocessing', 'concurrent', 'lib2to3',
     ],
     win_no_prefer_redirects=False,

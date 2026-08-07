@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fe76abf4-a4bb-4570-bac3-bde79e650c98" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cal.md" beforeDir="false" afterPath="$PROJECT_DIR$/Cal.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/Card.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/Card.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/cards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/static/js/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/static/js/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/标签大全.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/标签大全.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Probability_webview.spec" beforeDir="false" afterPath="$PROJECT_DIR$/source/Probability_webview.spec" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
